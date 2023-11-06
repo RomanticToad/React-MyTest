@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+.reactTest {
+  background-color: #282c34;
+  color: rgb(12, 254, 24);
+  font-size: 100px;
+}
 
 .App-logo {
   height: 40vmin;
