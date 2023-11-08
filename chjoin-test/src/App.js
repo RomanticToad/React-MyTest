@@ -6,9 +6,13 @@ import Join from "./component/Join";
 import MyCount from "./component/MyCount";
 
 import { Button, Space, DatePicker, version } from "antd";
+
 // 페이지 이동을 위한 설정1
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+//styled-component, 컴포넌트에서 좀더 편하게 css 작업하는 모듈
+//yarn add styled-components
+//확장팩 : styled-components
 
 function App() {
   return (
@@ -24,7 +28,6 @@ function App() {
         <Route path="join" element={<Join />} />
 
         <Route path="mycount" element={<MyCount />} />
-
       </Routes>
     </BrowserRouter>
   );
