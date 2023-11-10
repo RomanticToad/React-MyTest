@@ -91,6 +91,140 @@ const Main = () => {
           >
             mycount으로 이동
           </Button>
+          <br />
+          <br />
+          <Button
+            title="스크롤 ref 테스트 이동"
+            type="dashed"
+            onClick={() => {
+              navigate("/scrollRefTest");
+            }}
+          >
+            스크롤 ref 테스트 이동
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="listKeyDataAddDel테스트 이동"
+            type="primary"
+            onClick={() => {
+              navigate("/listKeyDataAddDel");
+            }}
+          >
+            키 설정의무 확인 및 데이터 추가 삭제 이동
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="LifeCycleTest 이동"
+            type="primary"
+            onClick={() => {
+              navigate("/ClassLifeCycleTest");
+            }}
+          >
+            클래스형 컴포넌트 생명주기 테스트
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="InfoTestUseState 이동"
+            type="primary"
+            onClick={() => {
+              navigate("/useStateTest");
+            }}
+          >
+            함수형 컴포넌트 훅스 1 useState
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="InfoTestUseEffect 이동"
+            type="primary"
+            onClick={() => {
+              navigate("/useEffectTest");
+            }}
+          >
+            함수형 컴포넌트 훅스 2 useEffect
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="useReducerTest 이동"
+            type="primary"
+            onClick={() => {
+              navigate("/useReducerTest");
+            }}
+          >
+            함수형 컴포넌트 훅스 3 useReducer
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="InfouseReducerTest 이동"
+            type="primary"
+            onClick={() => {
+              navigate("/InfouseReducerTest");
+            }}
+          >
+            함수형 컴포넌트 훅스 3 useReducer2
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="useMemoTest 이동"
+            type="primary"
+            onClick={() => {
+              navigate("/useMemoTest");
+            }}
+          >
+            함수형 컴포넌트 훅스 4 useMemo
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="useCallbackTest 이동"
+            type="primary"
+            onClick={() => {
+              navigate("/useCallbackTest");
+            }}
+          >
+            함수형 컴포넌트 훅스 5 useCallback
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="useRefTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/useRefTest");
+            }}
+          >
+            useRefTest 테스트
+          </Button>
+
+          <br />
+          <br />
+          <Button
+            title="useParamsTest/:id 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/useParamsTest");
+            }}
+          >
+            useParamsTest/:id 테스트 주소에다가 /숫자 붙이기 ex) /100
+          </Button>
+
+          <br />
+          <br />
+          <Button
+            title="customHooksTest 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/customHooksTest");
+            }}
+          >
+            customHooks 테스트
+          </Button>
         </Container>
       </div>
     </Wrapper>
