@@ -225,6 +225,39 @@ const Main = () => {
           >
             customHooks 테스트
           </Button>
+          <br />
+          <br />
+          <Button
+            title="Sass 테스트 "
+            type="primary"
+            onClick={() => {
+              navigate("/sassTest");
+            }}
+          >
+            Sass 테스트
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="styledComponentsTest "
+            type="primary"
+            onClick={() => {
+              navigate("/styledComponentsTest");
+            }}
+          >
+            styledComponentsTest
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="toDoMainTest "
+            type="primary"
+            onClick={() => {
+              navigate("/toDoMainTest");
+            }}
+          >
+            toDoMainTest
+          </Button>
         </Container>
       </div>
     </Wrapper>
