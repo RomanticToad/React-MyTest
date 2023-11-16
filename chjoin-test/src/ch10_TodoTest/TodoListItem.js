@@ -84,12 +84,23 @@ const RemoveCss = styled.div`
   }
 `;
 
+//가성 페이징 처리하는 클래스 style-components 추가하기
+const ListvirtualizedCss = styled.div`
+  //각 목록 요소가 출력이 될 때, 구분선 넣기.
+  & + & {
+    border-top: 1px solid #dee2e6;
+  }
+  &:nth-child(even) {
+    background: #f8f9fa;
+  }
+`;
+
 //부모 컴포넌트 TodoList 로 부터 전달받은 속성
 // <TodoListItem todo={todo} key={todo.id} />
 // todo={id:1,text="내용", checked : true}
 
 //지우는 기능을 하는 함수를 전달 받아서 사용하기
-const TodoListItem = ({ todo, onRemove, onToggle }) => {
+const TodoListItem = ({ todo, onRemove, onToggle, style }) => {
   //todo에서 text checked를 꺼내서 비구조화할당
   // const text = todo.text
   // const checked = todo.checked
@@ -109,32 +120,38 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
     // yarn add classnames : 이미 설치했음
     //"classnames" : "^2.3.2"
 
-    <TodoListItemCss>
-      {/* cn 이용하면 , checkbox라는 속성이 checked의 속성에 의해서
+    // 페이징 추가, 기존의 아이템요소 css부분을 감싸주기
+    <ListvirtualizedCss className="TodoListItem-virtualized" style={style}>
+      <TodoListItemCss>
+        {/* cn 이용하면 , checkbox라는 속성이 checked의 속성에 의해서
       true 이면 className에 등록이 되고
       false 이면 className에 등록이 안됨 */}
 
-      {/* 체크하는 함수 적용하기. */}
+        {/* 체크하는 함수 적용하기. */}
 
-      <CheckboxCss
-        className={cn("checkbox", { checked })}
-        onClick={() => onToggle(id)}
-      >
-        {/* 조건부 렌더링 cn이용해서 하기 */}
-        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+        <CheckboxCss
+          className={cn("checkbox", { checked })}
+          onClick={() => onToggle(id)}
+        >
+          {/* 조건부 렌더링 cn이용해서 하기 */}
+          {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
 
-        {/* 체크박스의 상태를 표시하는 checked 변수를 기준으로 , 
+          {/* 체크박스의 상태를 표시하는 checked 변수를 기준으로 , 
         조건이 true : MdCheckBock 를 사용하고
         조건이 false : MdCheckBoxOutlineBlank를 사용하기 */}
-        {/* <MdCheckBoxOutlineBlank /> */}
-        {/* 더미데이터 내용중 text가져오기 */}
-        {/* <TextCss>샘플 할일</TextCss> */}
-        <TextCss className="text">{text}</TextCss>
-      </CheckboxCss>
-      <RemoveCss>
-        <MdRemoveCircleOutline onClick={() => onRemove(id)} />
-      </RemoveCss>
-    </TodoListItemCss>
+          {/* <MdCheckBoxOutlineBlank /> */}
+          {/* 더미데이터 내용중 text가져오기 */}
+          {/* <TextCss>샘플 할일</TextCss> */}
+          <TextCss className="text">{text}</TextCss>
+        </CheckboxCss>
+        <RemoveCss>
+          <MdRemoveCircleOutline onClick={() => onRemove(id)} />
+        </RemoveCss>
+      </TodoListItemCss>
+    </ListvirtualizedCss>
   );
 };
-export default TodoListItem;
+
+//맨 마지막에서 디폴트 부분 react.memo 적용해서 , 1차 성능 개선 확인
+// export default TodoListItem;
+export default React.memo(TodoListItem);

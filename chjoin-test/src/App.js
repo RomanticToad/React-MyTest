@@ -71,6 +71,15 @@ import InfoTestCustomHooks from "./ch8_hooksTest/InfoTestCustomHooks";
 import TestSass from "./ch9_component/TestSass";
 import StyledComponentsTest from "./ch9_component/StyledComponentsTest";
 import TodoMain from "./ch10_TodoTest/TodoMain";
+import ImmerTest from "./ch12_ImmerTest/ImmerTest";
+import TestZone from "./ch12_ImmerTest/TestZone";
+import ApiTest from "./ch13_API_PublicDataTest/ApiTest";
+import ApiTestKoreaNews from "./ch13_API_PublicDataTest/ApiTestKoreaNews";
+import MainNews from "./ch13_API_PublicDataTest/component/MainNews";
+import NewsPage from "./ch13_API_PublicDataTest/page/NewsPage";
+import TestColorBox from "./ch14_ContextAPITest/TestColorBox";
+import TestColorMain from "./ch14_ContextAPITest/TestColorMain";
+import MainRes from "./my_api_test/component/MainRes";
 
 function App() {
   return (
@@ -116,6 +125,24 @@ function App() {
         <Route path="styledComponentsTest" element={<StyledComponentsTest />} />
 
         <Route path="toDoMainTest" element={<TodoMain />} />
+
+        <Route path="immerTest" element={<ImmerTest />} />
+
+        <Route path="testZone" element={<TestZone />} />
+
+        <Route path="apiTest" element={<ApiTest />} />
+
+        <Route path="apiTestKoreaNews" element={<ApiTestKoreaNews />} />
+
+        <Route path="mainNews" element={<MainNews />} />
+
+        <Route path="newsPageTest/:category" element={<NewsPage />} />
+
+        <Route path="contextAPITest" element={<TestColorBox />} />
+
+        <Route path="contextAPITest2" element={<TestColorMain />} />
+
+        <Route path="myMatZipList" element={<MainRes />} />
       </Routes>
     </BrowserRouter>
   );

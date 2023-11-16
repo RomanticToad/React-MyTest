@@ -39,4 +39,6 @@ const TodoBase = ({ children }) => {
   );
 };
 
-export default TodoBase;
+// export default TodoBase;
+export default React.memo(TodoBase);
+

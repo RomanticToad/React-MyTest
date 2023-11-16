@@ -258,6 +258,106 @@ const Main = () => {
           >
             toDoMainTest
           </Button>
+          <br />
+          <br />
+          <Button
+            title="immerTest "
+            type="primary"
+            onClick={() => {
+              navigate("/immerTest");
+            }}
+          >
+            immerTest, 불변성 쉽게 유지
+          </Button>
+
+          <br />
+          <br />
+          <Button
+            title="TestZone "
+            type="primary"
+            onClick={() => {
+              navigate("/testZone");
+            }}
+          >
+            TestZone
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="apiTest "
+            type="primary"
+            onClick={() => {
+              navigate("/apiTest");
+            }}
+          >
+            apiTest
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="apiTestKoreaNews "
+            type="primary"
+            onClick={() => {
+              navigate("/apiTestKoreaNews");
+            }}
+          >
+            apiTestKoreaNews
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="mainNews "
+            type="primary"
+            onClick={() => {
+              navigate("/mainNews");
+            }}
+          >
+            mainNews
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="newsPageTest/:category "
+            type="primary"
+            onClick={() => {
+              navigate("/newsPageTest/all");
+            }}
+          >
+            newsPageTest/:category
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="contextAPITest "
+            type="primary"
+            onClick={() => {
+              navigate("/contextAPITest");
+            }}
+          >
+            contextAPITest
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="contextAPITest2 "
+            type="primary"
+            onClick={() => {
+              navigate("/contextAPITest2");
+            }}
+          >
+            contextAPITest2
+          </Button>
+          <br />
+          <br />
+          <Button
+            title="myMatZipList "
+            type="primary"
+            onClick={() => {
+              navigate("/myMatZipList");
+            }}
+          >
+            myMatZipList
+          </Button>
         </Container>
       </div>
     </Wrapper>
